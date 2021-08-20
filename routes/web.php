@@ -16,3 +16,4 @@ use SebastianBergmann\CodeCoverage\CrapIndex;
 */
 
 Route::get('/index', [BooksController::class, 'index']);
+Route::get('/create', [BooksController::class, 'create']);

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -17,4 +18,10 @@ class BooksController extends Controller
 
         return view('books.index', compact(var_name: 'books'));
     }
+    public function create(){
+        return view ('books.create') ;
+    
+    }
+    
 }
+
