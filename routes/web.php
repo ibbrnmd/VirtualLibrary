@@ -17,3 +17,7 @@ use SebastianBergmann\CodeCoverage\CrapIndex;
 
 Route::get('/index', [BooksController::class, 'index']);
 Route::get('/create', [BooksController::class, 'create']);
+Route::post('/create', [BooksController::class, 'store']);
+Route::delete('/books/{id}', [BooksController::class, 'delete']);
+
+
