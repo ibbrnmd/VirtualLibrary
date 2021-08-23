@@ -1,11 +1,21 @@
 @extends('books.layout')
 
 @section('header')
-    Create books
-    @endsection
+Create books
+@endsection
 
 @section('content')
-<form method="post">
+
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+<form method="post" autocomplete="off">
     @csrf
     <div class="form-group" name="nome">
         <label for="book_name" class="">Nome:</label>
