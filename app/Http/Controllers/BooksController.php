@@ -36,7 +36,7 @@ class BooksController extends Controller
         $request->session()
             ->flash(
                 'message',
-                "Livro {$book->id} adicionado com sucesso"
+                "Livro {$book->name} adicionado com sucesso"
             );
 
         return redirect()->route(route: 'list_books');
